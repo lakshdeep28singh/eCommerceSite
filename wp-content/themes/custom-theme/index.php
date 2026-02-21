@@ -1,17 +1,8 @@
 <?php
-/**
- * This file has been left empty on purpose.
- *
- * @link https://core.trac.wordpress.org/ticket/54272
- *
- * @package custom-theme
- * @since 1.0.0
- */
-
-
-<?php
 /* Template Name: Custom Page Template */
-get_header(); 
+
+// Include header
+include get_template_directory() . '/header.html';
 ?>
 
 <main id="main-content" class="site-main">
@@ -38,4 +29,7 @@ get_header();
     </div>
 </main>
 
-<?php get_footer(); ?>
+<?php
+// Include footer
+include get_template_directory() . '/footer.html';
+?>
