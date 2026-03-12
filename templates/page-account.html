@@ -1,0 +1,47 @@
+<!-- wp:template-part {"slug":"header","theme":"custom-theme","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","layout":{"type":"constrained"},"style":{"spacing":{"padding":{"top":"3rem","bottom":"5rem"}}}} -->
+<main class="wp-block-group">
+
+    <!-- wp:woocommerce/store-notices /-->
+
+    <!-- wp:heading {"level":1,"textColor":"eco-green-dark","fontSize":"xx-large","style":{"spacing":{"margin":{"bottom":"0.5rem"}}}} -->
+    <h1 class="wp-block-heading has-eco-green-dark-color has-text-color has-xx-large-font-size">My Account</h1>
+    <!-- /wp:heading -->
+
+    <!-- wp:paragraph {"textColor":"mid-grey","style":{"typography":{"fontSize":"0.9rem"},"spacing":{"margin":{"bottom":"2.5rem"}}}} -->
+    <p class="has-mid-grey-color has-text-color">Manage your orders, downloads, and account details.</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:woocommerce/customer-account {"displayStyle":"icon_and_text"} /-->
+
+    <!-- wp:columns {"style":{"spacing":{"blockGap":"2.5rem","margin":{"top":"2rem"}}}} -->
+    <div class="wp-block-columns">
+
+        <!-- wp:column {"width":"28%"} -->
+        <div class="wp-block-column" style="flex-basis:28%">
+            <!-- wp:group {"style":{"border":{"radius":"8px","width":"1px","color":"#e5e7eb"},"spacing":{"padding":{"top":"1.5rem","bottom":"1.5rem","left":"0","right":"0"}}},"backgroundColor":"white"} -->
+            <div class="wp-block-group has-white-background-color has-background" style="border:1px solid #e5e7eb;border-radius:8px">
+                <!-- wp:woocommerce/account-navigation /-->
+            </div>
+            <!-- /wp:group -->
+        </div>
+        <!-- /wp:column -->
+
+        <!-- wp:column {"width":"72%"} -->
+        <div class="wp-block-column" style="flex-basis:72%">
+            <!-- wp:group {"style":{"border":{"radius":"8px","width":"1px","color":"#e5e7eb"},"spacing":{"padding":{"top":"2rem","bottom":"2rem","left":"2rem","right":"2rem"}}},"backgroundColor":"white"} -->
+            <div class="wp-block-group has-white-background-color has-background" style="border:1px solid #e5e7eb;border-radius:8px;padding:2rem">
+                <!-- wp:woocommerce/account-content /-->
+            </div>
+            <!-- /wp:group -->
+        </div>
+        <!-- /wp:column -->
+
+    </div>
+    <!-- /wp:columns -->
+
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","theme":"custom-theme","tagName":"footer"} /-->

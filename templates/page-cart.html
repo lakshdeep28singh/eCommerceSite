@@ -1,0 +1,48 @@
+<!-- wp:template-part {"slug":"header","theme":"custom-theme","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","layout":{"type":"constrained"},"style":{"spacing":{"padding":{"top":"3rem","bottom":"5rem"}}}} -->
+<main class="wp-block-group">
+
+    <!-- wp:woocommerce/store-notices /-->
+
+    <!-- wp:heading {"level":1,"textColor":"eco-green-dark","fontSize":"xx-large","style":{"spacing":{"margin":{"bottom":"2rem"}}}} -->
+    <h1 class="wp-block-heading has-eco-green-dark-color has-text-color has-xx-large-font-size">Your Cart</h1>
+    <!-- /wp:heading -->
+
+    <!-- wp:woocommerce/cart -->
+        <!-- wp:woocommerce/cart-items-block -->
+
+            <!-- wp:woocommerce/cart-line-items-block /-->
+
+        <!-- /wp:woocommerce/cart-items-block -->
+
+        <!-- wp:woocommerce/cart-totals-block -->
+
+            <!-- wp:woocommerce/cart-order-summary-block -->
+
+                <!-- wp:woocommerce/cart-order-summary-heading-block {"content":"Order Summary"} /-->
+                <!-- wp:woocommerce/cart-order-summary-subtotal-block /-->
+                <!-- wp:woocommerce/cart-order-summary-coupon-form-block /-->
+                <!-- wp:woocommerce/cart-order-summary-shipping-block /-->
+                <!-- wp:woocommerce/cart-order-summary-taxes-block /-->
+
+            <!-- /wp:woocommerce/cart-order-summary-block -->
+
+            <!-- wp:woocommerce/proceed-to-checkout-block {"style":{"border":{"radius":"4px"},"typography":{"textTransform":"uppercase","letterSpacing":"0.05em"}},"backgroundColor":"eco-green","textColor":"white"} /-->
+
+            <!-- wp:group {"style":{"spacing":{"padding":{"top":"1.25rem","bottom":"1.25rem","left":"1.25rem","right":"1.25rem"},"margin":{"top":"1rem"}},"border":{"radius":"8px"}},"backgroundColor":"eco-beige"} -->
+            <div class="wp-block-group has-eco-beige-background-color has-background" style="border-radius:8px;padding:1.25rem;margin-top:1rem">
+                <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.8rem","lineHeight":"1.6"}},"textColor":"eco-brown"} -->
+                <p class="has-eco-brown-color has-text-color">🌿 Free shipping on orders over $50 &nbsp;|&nbsp; ♻️ Eco-friendly packaging on every order</p>
+                <!-- /wp:paragraph -->
+            </div>
+            <!-- /wp:group -->
+
+        <!-- /wp:woocommerce/cart-totals-block -->
+
+    <!-- /wp:woocommerce/cart -->
+
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","theme":"custom-theme","tagName":"footer"} /-->

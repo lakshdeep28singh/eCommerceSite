@@ -1,0 +1,74 @@
+<!-- wp:template-part {"slug":"header","theme":"custom-theme","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","layout":{"type":"constrained"},"style":{"spacing":{"padding":{"top":"3rem","bottom":"4rem"}}}} -->
+<main class="wp-block-group">
+
+    <!-- wp:group {"layout":{"type":"constrained"},"style":{"spacing":{"padding":{"bottom":"2rem"}}}} -->
+    <div class="wp-block-group">
+        <!-- wp:heading {"level":1,"textAlign":"center","fontSize":"xx-large","textColor":"eco-green-dark"} -->
+        <h1 class="wp-block-heading has-text-align-center has-eco-green-dark-color has-text-color has-xx-large-font-size">From The EcoCart Blog</h1>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph {"align":"center","textColor":"mid-grey","style":{"typography":{"fontSize":"1.125rem"}}} -->
+        <p class="has-text-align-center has-mid-grey-color has-text-color">Tips, stories and ideas for a more sustainable lifestyle.</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:separator {"backgroundColor":"eco-green","className":"is-style-wide","style":{"spacing":{"margin":{"top":"1.5rem","bottom":"0"}}}} -->
+        <hr class="wp-block-separator has-text-color has-eco-green-color has-alpha-channel-opacity has-eco-green-background-color has-background is-style-wide"/>
+        <!-- /wp:separator -->
+    </div>
+    <!-- /wp:group -->
+
+    <!-- wp:query {"queryId":1,"query":{"perPage":6,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true},"layout":{"type":"constrained"}} -->
+    <div class="wp-block-query">
+
+        <!-- wp:post-template {"layout":{"type":"grid","columnCount":2}} -->
+
+            <!-- wp:group {"style":{"spacing":{"padding":{"top":"0","bottom":"1.5rem","left":"0","right":"0"},"margin":{"bottom":"2rem"}},"border":{"radius":"8px","width":"1px","color":"#e5e7eb"}},"backgroundColor":"white","layout":{"type":"constrained"}} -->
+            <div class="wp-block-group has-white-background-color has-background" style="border:1px solid #e5e7eb;border-radius:8px;padding-bottom:1.5rem;margin-bottom:2rem">
+
+                <!-- wp:post-featured-image {"isLink":true,"style":{"border":{"radius":"8px 8px 0 0"}},"height":"220px"} /-->
+
+                <!-- wp:group {"style":{"spacing":{"padding":{"top":"1.25rem","bottom":"0","left":"1.25rem","right":"1.25rem"}}}} -->
+                <div class="wp-block-group">
+
+                    <!-- wp:post-terms {"term":"category","style":{"typography":{"fontSize":"0.75rem","fontWeight":"700","textTransform":"uppercase","letterSpacing":"0.08em"}},"textColor":"eco-green"} /-->
+
+                    <!-- wp:post-title {"isLink":true,"level":2,"style":{"typography":{"fontSize":"1.25rem"},"spacing":{"margin":{"top":"0.5rem","bottom":"0.5rem"}}},"textColor":"eco-green-dark"} /-->
+
+                    <!-- wp:post-excerpt {"moreText":"Read More →","excerptLength":20,"style":{"typography":{"fontSize":"0.9rem","lineHeight":"1.6"},"spacing":{"margin":{"bottom":"1rem"}}},"textColor":"mid-grey"} /-->
+
+                    <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"},"style":{"spacing":{"padding":{"top":"1rem"}},"border":{"top":{"color":"#f3f4f6","width":"1px","style":"solid"}}}} -->
+                    <div class="wp-block-group">
+                        <!-- wp:post-author {"showAvatar":false,"showBio":false,"byline":"By","style":{"typography":{"fontSize":"0.8rem"}}} /-->
+                        <!-- wp:post-date {"format":"M j, Y","style":{"typography":{"fontSize":"0.8rem"}},"textColor":"mid-grey"} /-->
+                    </div>
+                    <!-- /wp:group -->
+
+                </div>
+                <!-- /wp:group -->
+
+            </div>
+            <!-- /wp:group -->
+
+        <!-- /wp:post-template -->
+
+        <!-- wp:query-no-results -->
+            <!-- wp:paragraph {"align":"center","textColor":"mid-grey","style":{"spacing":{"padding":{"top":"3rem","bottom":"3rem"}}}} -->
+            <p class="has-text-align-center has-mid-grey-color has-text-color">No posts found. Check back soon!</p>
+            <!-- /wp:paragraph -->
+        <!-- /wp:query-no-results -->
+
+        <!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"margin":{"top":"3rem"}}}} -->
+            <!-- wp:query-pagination-previous {"label":"← Previous"} /-->
+            <!-- wp:query-pagination-numbers /-->
+            <!-- wp:query-pagination-next {"label":"Next →"} /-->
+        <!-- /wp:query-pagination -->
+
+    </div>
+    <!-- /wp:query -->
+
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","theme":"custom-theme","tagName":"footer"} /-->

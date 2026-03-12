@@ -1,0 +1,215 @@
+/*
+Theme Name: EcoCart
+Author: Lakshdeep Singh
+Tags: full-site-editing, e-commerce, woocommerce
+Text Domain: ecocart
+Requires at least: 6.1
+Requires PHP: 7.4
+Tested up to: 6.7
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+/* ── Global Reset ── */
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; padding: 0; }
+img { max-width: 100%; height: auto; display: block; }
+a { transition: color 0.2s ease; }
+
+/* ── Header ── */
+.wp-block-template-part header {
+    background: #ffffff;
+    border-bottom: 2px solid #e8f5e9;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+/* ── Navigation ── */
+.wp-block-navigation a {
+    text-decoration: none !important;
+    color: #1a1a1a !important;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.4rem 0;
+    position: relative;
+}
+.wp-block-navigation a::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 0; height: 2px;
+    background: #2e7d32;
+    transition: width 0.2s ease;
+}
+.wp-block-navigation a:hover::after { width: 100%; }
+.wp-block-navigation a:hover { color: #2e7d32 !important; }
+
+/* ── Site Title ── */
+.wp-block-site-title a {
+    text-decoration: none !important;
+    color: #1b5e20 !important;
+    font-weight: 700;
+}
+
+/* ── Footer ── */
+.wp-block-template-part footer {
+    background: #1b5e20;
+    color: #ffffff;
+}
+.wp-block-template-part footer p,
+.wp-block-template-part footer a { color: #c8e6c9; }
+.wp-block-template-part footer a:hover { color: #ffffff; }
+.wp-block-social-links { gap: 16px !important; }
+.wp-block-social-link a { background: rgba(255,255,255,0.15) !important; border-radius: 50%; }
+.wp-block-social-link a:hover { background: rgba(255,255,255,0.3) !important; }
+
+/* ── Buttons ── */
+.wp-block-button__link,
+.wp-element-button {
+    background-color: #2e7d32 !important;
+    color: #ffffff !important;
+    border-radius: 4px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: background 0.2s ease !important;
+    border: none !important;
+}
+.wp-block-button__link:hover,
+.wp-element-button:hover { background-color: #1b5e20 !important; }
+
+/* ── WooCommerce General ── */
+.woocommerce-message,
+.woocommerce-info { border-top-color: #2e7d32; }
+.woocommerce-message::before { color: #2e7d32; }
+.woocommerce button.button,
+.woocommerce a.button,
+.woocommerce input.button,
+.woocommerce #respond input#submit {
+    background: #2e7d32 !important;
+    color: #fff !important;
+    border-radius: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    transition: background 0.2s;
+}
+.woocommerce button.button:hover,
+.woocommerce a.button:hover { background: #1b5e20 !important; }
+
+/* Product cards */
+.wc-block-grid__product,
+ul.products li.product {
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+    background: #fff;
+}
+.wc-block-grid__product:hover,
+ul.products li.product:hover {
+    box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+    transform: translateY(-2px);
+}
+.wc-block-grid__product-price,
+ul.products li.product .price { color: #2e7d32; font-weight: 700; }
+
+/* Cart & Checkout */
+.woocommerce table.shop_table { border-collapse: collapse; width: 100%; }
+.woocommerce table.shop_table th {
+    background: #f5f0e8;
+    color: #1b5e20;
+    font-weight: 700;
+    padding: 0.75rem 1rem;
+    border-bottom: 2px solid #e8f5e9;
+}
+.woocommerce table.shop_table td { padding: 0.75rem 1rem; border-bottom: 1px solid #f3f4f6; }
+.woocommerce .cart-collaterals h2,
+.woocommerce-checkout h3 { color: #1b5e20; }
+
+/* Checkout fields */
+.woocommerce form .form-row input.input-text,
+.woocommerce form .form-row select,
+.woocommerce form .form-row textarea {
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    padding: 0.65rem 0.9rem;
+    font-size: 1rem;
+    width: 100%;
+    background: #fafaf8;
+    transition: border-color 0.2s;
+}
+.woocommerce form .form-row input.input-text:focus,
+.woocommerce form .form-row textarea:focus {
+    border-color: #2e7d32;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(46,125,50,0.12);
+}
+
+/* My Account */
+.woocommerce-account .woocommerce-MyAccount-navigation ul { list-style: none; padding: 0; margin: 0; }
+.woocommerce-account .woocommerce-MyAccount-navigation li a {
+    display: block;
+    padding: 0.75rem 1.25rem;
+    color: #1a1a1a;
+    text-decoration: none;
+    border-left: 3px solid transparent;
+    transition: all 0.2s;
+}
+.woocommerce-account .woocommerce-MyAccount-navigation li.is-active a,
+.woocommerce-account .woocommerce-MyAccount-navigation li a:hover {
+    color: #2e7d32;
+    border-left-color: #2e7d32;
+    background: #f5f0e8;
+}
+
+/* ── Contact Form 7 ── */
+.wpcf7 input[type="text"],
+.wpcf7 input[type="email"],
+.wpcf7 textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-family: Inter, sans-serif;
+    font-size: 1rem;
+    color: #1a1a1a;
+    background: #fafaf8;
+    margin-bottom: 1rem;
+}
+.wpcf7 input[type="text"]:focus,
+.wpcf7 input[type="email"]:focus,
+.wpcf7 textarea:focus {
+    outline: none;
+    border-color: #2e7d32;
+    box-shadow: 0 0 0 3px rgba(46,125,50,0.15);
+}
+.wpcf7 input[type="submit"] {
+    background-color: #2e7d32;
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+.wpcf7 input[type="submit"]:hover { background-color: #1b5e20; }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .wp-block-columns { flex-direction: column !important; }
+    .wp-block-column { width: 100% !important; flex-basis: 100% !important; }
+    .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__responsive-container-content {
+        display: none;
+    }
+}
